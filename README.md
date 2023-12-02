@@ -12,29 +12,29 @@
 
 ---
 
-# `dig`
+# `$USER@$HOSTNAME`
 
 ![](./me.jpg)
 
 ## Vim Related
 
-- [chadtree](https://github.com/ms-jpq/chadtree)
+- [chadtree](https://github.com/ms-jpq/chadtree), NerdTree but chad
 
-- [coq.nvim](https://github.com/ms-jpq/coq_nvim)
+- [coq.nvim](https://github.com/ms-jpq/coq_nvim), CoC.nvim but coq
 
-- [lua async await](https://github.com/ms-jpq/lua-async-await)
+- [lua async await](https://github.com/ms-jpq/lua-async-await), coroutine based control flow for libuv
 
 ## Misc
 
-- [sad](https://github.com/ms-jpq/sad)
+- [sad](https://github.com/ms-jpq/sad), interactive TUI sed(ish)
 
-- [noact](https://github.com/ms-jpq/noact)
+- [noact](https://github.com/ms-jpq/noact), React virtual DOM in 70 lines (fully typed)
 
 - lots more...
 
 ---
 
-# Cultural Learnings of `VIM` for Make Benefit Glorious Nation of `UNIX`
+# Cultural Learnings of VIM for Make Benefit Glorious Nation of UNIX
 
 - Translation: Understanding `UNIX` through the lens of `VIM`
 
@@ -155,21 +155,9 @@ Listen 80
 
 ---
 
-# `VIM` for the Machine God
+# Incantations for the machine spirits
 
 ![](./tech_preist.gif)
-
-## Prose
-
-```txt
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-```
-
----
-
-## Incantations for the machine spirits
 
 - `"…"` ⇒ `CI"`
 
@@ -187,13 +175,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 ---
 
-# What is the Machine God
-
-![](./omnissiah.gif)
-
----
-
-# What are the tenants of the `UNIX` machine spirits
+# Core tenants of the `UNIX` machine spirits
 
 - Files
 
@@ -202,6 +184,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 - Processes
 
 - **Recursion**
+
+![](./omnissiah.gif)
 
 ---
 
@@ -239,9 +223,9 @@ gay <<<"$SAYING" >&2
 
 ## Other shell recursions
 
-- `chroot`
+- `chroot`: before / after file system isolation
 
-- `ip netns exec`
+- `ip netns exec`: before / after network isolation
 
 - **`ssh`**
 
@@ -252,6 +236,8 @@ bash -> ssh -> sshd -> bash
 ---
 
 # `NVIM` Tree ~~Sitter~~
+
+- Multi-Process
 
 ```bash
 pstree
@@ -338,4 +324,30 @@ $XDG_CONFIG_HOME/nvim/after"
 …
 /usr/lib/systemd/system/*
 /run/systemd/generator.late/*
+```
+
+```txt
+-+= 00001 root /sbin/launchd
+ |--= 00490 root /usr/libexec/logd
+ |--= 00491 root /usr/libexec/smd
+ |--= 00492 root /usr/libexec/UserEventAgent (System)
+ |--= 00494 root /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninst
+ |--= 00495 root /System/Library/Frameworks/CoreServices.framework/Versions/A/Framework
+ |--= 00496 root /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediar
+ |-+= 00499 root /usr/sbin/systemstats --daemon
+ | \--- 00769 root /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+```
+
+```txt
+systemd
+  ├─5/flow_checks --daemon --http-prefix=/ntop --disable-login=1
+  ├─agetty -o -p -- \\u --noclear tty1 linux
+  ├─chronyd
+  ├─cron -f -P
+  ├─dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation -
+  ├─dnsmasq --conf-file=/run/local/dnsmasq/wg0/dnsmasq.conf
+  ├─dnsmasq --conf-file=/run/local/dnsmasq/enp1s0/dnsmasq.conf
+  ├─haproxy -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/opt/hapro
+  │   └─haproxy -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/opt/h
+
 ```
