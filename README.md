@@ -1,10 +1,8 @@
 # Cultural Learnings of `VIM` for Make Benefit Glorious Nation of `UNIX`
 
-- Translation: Understanding `UNIX` through the lens of `VIM`
+- Understanding `UNIX` through the lens of `VIM`
 
-- `VIM` ⇆ Files are **Text** ⇆ Everything is a **File** ⇆ **Processes** communicate via Flies ⇆ `UNIX`
-
-- `VIM` ⇆ **Recursion** ⇆ **Tree** of Processes ⇆ `UNIX`
+- `VIM` as a microcosm of `UNIX` systems
 
 ---
 
@@ -16,15 +14,17 @@
 
 - Life status: NEET, traveling the flat planet sphere
 
-- If you are in Seattle area: Wink, Wink
-
 - [hao@bigly.dog](mailto:hao@bigly.dog)
 
 ![](./me.jpg)
 
 ---
 
-# `VIM` Related
+# What Did I Make
+
+[https://github.com/ms-jpq](https://github.com/ms-jpq)
+
+## `VIM` Related
 
 - [chadtree](https://github.com/ms-jpq/chadtree), NerdTree but chad
 
@@ -32,7 +32,7 @@
 
 - [lua async await](https://github.com/ms-jpq/lua-async-await), coroutine based control flow for libuv
 
-# Misc
+## Misc
 
 - [sad](https://github.com/ms-jpq/sad), interactive TUI sed(ish)
 
@@ -42,15 +42,41 @@
 
 ---
 
+# Core tenants of the `UNIX` machine spirits
+
+- Files
+
+- Text
+
+- Processes
+
+![](./omnissiah.gif)
+
+## TLDR
+
+- `VIM` ⇆ Files are **Text** ⇆ Everything is a **File** ⇆ **Processes** communicate via Flies ⇆ `UNIX`
+
+## Recursion
+
+- Emergent property
+
+- `VIM` ⇆ **Recursion** ⇆ **Tree** of Processes ⇆ `UNIX`
+
+---
+
 # What makes `VIM` special?
+
+## I reject my humanity
 
 - `HJKL` 👏
 
 - `←↑↓→` ✋
 
-- "Weird" things like relative positioning?
+- Relative line positioning?
 
-![](./relativenumber.png)
+- Delete 3 characters to the left?
+
+_From the moment I understood the weakness of my flesh, it disgusted me._
 
 ---
 
@@ -96,7 +122,41 @@ Syntax ↔ **Semantics**
 
 ---
 
+# GNU's Not Unix
+
+- `UNIX` is nothing without its userspace
+
+```txt
+I'd just like to interject for a moment.
+
+What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux.
+
+Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
+
+Many computer users run a modified version of the GNU system every day, without realizing it.
+
+Through a peculiar turn of events, the version of GNU which is widely used today is often called Linux, and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
+
+There really is a Linux, and these people are using it, but it is just a part of the system they use.
+
+Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run.
+
+The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system.
+
+Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux.
+
+All the so-called Linux distributions are really distributions of GNU/Linux!
+
+- Richard, Emacs.
+```
+
+---
+
 # What about "ad hoc" syntax
+
+- No TreeSitter
+
+- Informal
 
 ## `ini` style: systemd, samba, mypy, php, git, warcraft3, fallout, literally every other program
 
@@ -151,6 +211,8 @@ Listen 80
 
 # Incantations for the machines
 
+## Emergent grammars
+
 ![](./tech_preist.gif)
 
 - `"…"` ⇒ `CI"`
@@ -163,23 +225,31 @@ Listen 80
 
 - `{…}` ⇒ `CI}`
 
-- _Consecutive "word" characters_ `/[A-z_]+/` ⇒ `CIw`
+- _Consecutive "word" characters_ `/[A-z1-9_]+/` ⇒ `CIw`
 
 - _**Not** whitespace characters_ `[^s]+` ⇒ `CIW`
 
 ---
 
-# Core tenants of the `UNIX` machine spirits
+# ~~`COKE`~~ `VIM` Classic
 
-- Files
+- `std{in,out,err}` are files too
 
-- Text
+## Text IO
 
-- **Processes**
+- `'shell' 'sh'		string	(default $SHELL or "sh", Win32: "cmd.exe")`
 
-- **Recursion**
+- `:help grep`
 
-![](./omnissiah.gif)
+- `:help ctags`
+
+- `:help make`
+
+- `:help unnamed`
+
+- `:help terminal`
+
+## Installing `NVIM` on Windows comes with full `UNIX` suite via `msys2`
 
 ---
 
@@ -189,7 +259,7 @@ Listen 80
 
 - HTTP is a text protocol
 
-- `bash` → `socat` → `bash` recursion
+- `bash` → `socat` → `bash` **recursion**
 
 ```bash
 #!/usr/bin/env -S -- bash -Eeu -O dotglob -O nullglob -O extglob -O failglob -O globstar
@@ -209,10 +279,8 @@ HTTP/1.1 200 OK
 
 EOF
 
-SAYING="$(fortune | cowsay)"
-
-printf -- '%s' "$SAYING"
-gay <<<"$SAYING" >&2
+fortune | cowsay
+gay <"$0" >&2
 ```
 
 ---
@@ -228,38 +296,6 @@ gay <<<"$SAYING" >&2
 ```
 bash -> ssh -> sshd -> bash
 ```
-
----
-
-# `NVIM` Tree Sitter
-
-- `NVIM` leaf
-
-- Tree of Processes
-
-```txt
-\-+= 08871 iiiiii nvim
-  \-+= 08872 iiiiii nvim --embed
-    |--= 08873 iiiiii /Library/Developer/CommandLineTools/Library/Frameworks/Python3.fr
-    |--= 08874 iiiiii /Users/iiiiii/.config/nvim/pack/modules/start/chadtree/.vars/runt
-    |-+= 08875 iiiiii /Users/iiiiii/.config/nvim/pack/modules/start/coq_nvim/.vars/runt
-    | \-+- 09191 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq_n
-    |   |-+- 09198 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq
-    |   | \--- 09233 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/c
-    |   \--- 86848 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq
-    |--= 08882 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/bin/typos-lsp
-    |-+= 08901 iiiiii /Users/iiiiii/.local/share/.codeium/bin/3dee3c5d9fe70aff1993c1a94
-    | \--- 08924 iiiiii /Users/iiiiii/.local/share/.codeium/bin/3dee3c5d9fe70aff1993c1a
-    |--= 09011 iiiiii /Users/iiiiii/.local/asdf/installs/nodejs/20.8.0/bin/node /Users/
-    |--= 09151 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/bin/marksman server
-    \--= 09152 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/lib/ltex-ls/jdk-11.0.1
-```
-
-- `nvim --embed` ??
-
-- Plugins
-
-- LSP servers
 
 ---
 
@@ -305,6 +341,38 @@ systemd,1
 
 ---
 
+# `NVIM` Tree Sitter
+
+- `NVIM` leaf
+
+- Tree of Processes
+
+```txt
+\-+= 08871 iiiiii nvim
+  \-+= 08872 iiiiii nvim --embed
+    |--= 08873 iiiiii /Library/Developer/CommandLineTools/Library/Frameworks/Python3.fr
+    |--= 08874 iiiiii /Users/iiiiii/.config/nvim/pack/modules/start/chadtree/.vars/runt
+    |-+= 08875 iiiiii /Users/iiiiii/.config/nvim/pack/modules/start/coq_nvim/.vars/runt
+    | \-+- 09191 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq_n
+    |   |-+- 09198 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq
+    |   | \--- 09233 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/c
+    |   \--- 86848 iiiiii /Users/iiiiii/Library/Preferences/nvim/pack/modules/start/coq
+    |--= 08882 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/bin/typos-lsp
+    |-+= 08901 iiiiii /Users/iiiiii/.local/share/.codeium/bin/3dee3c5d9fe70aff1993c1a94
+    | \--- 08924 iiiiii /Users/iiiiii/.local/share/.codeium/bin/3dee3c5d9fe70aff1993c1a
+    |--= 09011 iiiiii /Users/iiiiii/.local/asdf/installs/nodejs/20.8.0/bin/node /Users/
+    |--= 09151 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/bin/marksman server
+    \--= 09152 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/lib/ltex-ls/jdk-11.0.1
+```
+
+- `nvim --embed` ??
+
+- Plugins
+
+- LSP servers
+
+---
+
 ## OCI Containers
 
 - Tini, S6, supervisord, etc
@@ -320,28 +388,6 @@ podman-init,1 -- docker-entrypoint.sh postgres
       |-postgres,65
       `-postgres,69
 ```
-
----
-
-# ~~`COKE`~~ `VIM` Classic
-
-- `std{in,out,err}` are files too
-
-## Text IO
-
-- `'shell' 'sh'		string	(default $SHELL or "sh", Win32: "cmd.exe")`
-
-- `:help grep`
-
-- `:help ctags`
-
-- `:help make`
-
-- `:help unnamed`
-
-- `:help terminal`
-
-## Installing `NVIM` on Windows comes with full `UNIX` suite via `msys2`
 
 ---
 
@@ -395,7 +441,9 @@ $XDG_CONFIG_HOME/nvim/after"
 
 ---
 
-# M ~~16~~ 4
+# What is the Most UNiX Program?
+
+# # M ~~16~~ 4
 
 - Most ~~American~~ UNIX problem solver
 
@@ -413,7 +461,17 @@ $XDG_CONFIG_HOME/nvim/after"
 
 ---
 
-# Please Clap
+# TLDR2, Subsequent Moviefilm
+
+- Everything is a **file**
+
+- **Files** are mostly **text**
+
+- **Processes** communicate via **files**
+
+---
+
+# Please Clap 💁‍♀️
 
 [https://github.com/ms-jpq/vim.conf-2023](https://github.com/ms-jpq/vim.conf-2023)
 

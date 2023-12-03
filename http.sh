@@ -15,7 +15,5 @@ HTTP/1.1 200 OK
 
 EOF
 
-SAYING="$(fortune | cowsay)"
-
-printf -- '%s' "$SAYING"
-gay <<<"$SAYING" >&2
+fortune | cowsay
+gay <"$0" >&2
