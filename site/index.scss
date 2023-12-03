@@ -1,0 +1,66 @@
+@use "../node_modules/modern-normalize/modern-normalize.css";
+@use "../node_modules/github-markdown-css/github-markdown.css";
+
+:root {
+  --focus-colour: #fdf5bf;
+  --border-colour: rgb(225, 228, 232);
+  --padding-size: 1em;
+}
+
+body {
+  padding: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --focus-colour: #83782e;
+  }
+
+  body {
+    color: #c9d1d9;
+    background-color: #0d1117;
+  }
+}
+
+main {
+  border: thin solid var(--border-colour);
+  border-radius: 0.3em;
+
+  margin: auto;
+  max-width: 60em;
+
+  padding: var(--padding-size);
+}
+
+/* body { */
+/*   align-items: center; */
+/*   display: flex; */
+/*   height: 100vh; */
+/*   justify-content: center; */
+/*   margin: 0; */
+/*   padding: 0; */
+/*   width: 100vw; */
+/* } */
+
+header {
+  column-gap: 0.1rem;
+  display: flex;
+  padding-right: 0.2rem;
+  padding-top: 0.2rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* main { */
+/*   height: 100%; */
+/*   width: 100%; */
+/* } */
+
+footer {
+  bottom: 0;
+  padding-right: 0.2rem;
+  padding-top: 0.2rem;
+  position: fixed;
+  right: 0;
+}

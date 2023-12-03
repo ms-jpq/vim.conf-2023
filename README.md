@@ -422,5 +422,3 @@ $XDG_CONFIG_HOME/nvim/after"
 - Planning on moving from Vancouver to Seattle
 
 - TN work VISA needed, since I'm Canadian
-
----

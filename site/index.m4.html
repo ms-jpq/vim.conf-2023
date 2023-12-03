@@ -1,0 +1,28 @@
+<!--m4_changequote(`[', `]')-->
+<!--m4_changecom([], [])-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="./index.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <!--m4_ifelse(ENV_PAGE, ENV_PAGES, [], [-->
+      <a href="m4_eval(ENV_PAGE + 1).html" id="ArrowRight">
+        <button>👉</button>
+      </a>
+      <!--])-->
+      <!--m4_ifelse(ENV_PAGE, [1], [], [-->
+      <a href="m4_eval(ENV_PAGE - 1).html" id="ArrowLeft">
+        <button>👈</button>
+      </a>
+      <!--])-->
+    </header>
+    <main>m4_undivert(ENV_MARKDOWN)</main>
+    <footer>ENV_PAGE / ENV_PAGES</footer>
+  </body>
+</html>

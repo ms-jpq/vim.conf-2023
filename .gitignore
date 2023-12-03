@@ -1,2 +1,4 @@
+*.css
 *.html
+package-lock.json
 !*.m4.html
