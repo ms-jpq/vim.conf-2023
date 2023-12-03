@@ -1,3 +1,13 @@
+# Cultural Learnings of `VIM` for Make Benefit Glorious Nation of `UNIX`
+
+- Translation: Understanding `UNIX` through the lens of `VIM`
+
+- `VIM` ⇆ Files are **Text** ⇆ Everything is a **File** ⇆ **Processes** communicate via Flies ⇆ `UNIX`
+
+- `VIM` ⇆ **Recursion** ⇆ **Tree** of Processes ⇆ `UNIX`
+
+---
+
 # `whoami`
 
 - [https://github.com/ms-jpq](https://github.com/ms-jpq)
@@ -9,10 +19,6 @@
 - If you are in Seattle area: Wink, Wink
 
 - [hao@bigly.dog](mailto:hao@bigly.dog)
-
----
-
-# `$USER@$HOSTNAME`
 
 ![](./me.jpg)
 
@@ -31,16 +37,6 @@
 - [noact](https://github.com/ms-jpq/noact), React virtual DOM in 70 lines (fully typed)
 
 - lots more...
-
----
-
-# Cultural Learnings of `VIM` for Make Benefit Glorious Nation of `UNIX`
-
-- Translation: Understanding `UNIX` through the lens of `VIM`
-
-- `VIM` ⇆ Files are **Text** ⇆ Everything is a **File** ⇆ **Processes** communicate via Flies ⇆ `UNIX`
-
-- `VIM` ⇆ **Recursion** ⇆ **Tree** of Processes ⇆ `UNIX`
 
 ---
 
@@ -70,7 +66,7 @@
 
 ---
 
-# Vim is more of a ~syntax~ editor
+# VIM is more of a ~syntax~ editor
 
 Syntax ↔ **Semantics**
 

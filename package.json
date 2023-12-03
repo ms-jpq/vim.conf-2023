@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "dependencies": {
+    "github-markdown-css": "^5",
+    "modern-normalize": "^2",
+    "sass": "^1"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  },
+  "type": "module"
+}
