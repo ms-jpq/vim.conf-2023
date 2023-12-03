@@ -5,5 +5,8 @@
     "modern-normalize": "^2",
     "sass": "^1"
   },
+  "devDependencies": {
+    "typescript": "*"
+  },
   "type": "module"
 }

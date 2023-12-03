@@ -22,7 +22,9 @@
 
 ![](./me.jpg)
 
-## `VIM` Related
+---
+
+# `VIM` Related
 
 - [chadtree](https://github.com/ms-jpq/chadtree), NerdTree but chad
 
@@ -30,7 +32,7 @@
 
 - [lua async await](https://github.com/ms-jpq/lua-async-await), coroutine based control flow for libuv
 
-## Misc
+# Misc
 
 - [sad](https://github.com/ms-jpq/sad), interactive TUI sed(ish)
 
@@ -40,7 +42,7 @@
 
 ---
 
-# What makes VIM special?
+# What makes `VIM` special?
 
 - `HJKL` 👏
 
@@ -113,8 +115,6 @@ IPv6AcceptRA      = no
 Domains           = ~onion ~exit
 ```
 
----
-
 ## `Nginx` style: lighttpd, haproxy, dhclient, etc
 
 ```nginx
@@ -130,8 +130,6 @@ server {
   }
 }
 ```
-
----
 
 ## `XML`ish style: openvpn, cups, apache, etc
 
@@ -177,7 +175,7 @@ Listen 80
 
 - Text
 
-- Processes
+- **Processes**
 
 - **Recursion**
 
@@ -415,7 +413,7 @@ $XDG_CONFIG_HOME/nvim/after"
 
 ---
 
-# `@me`
+# Please Clap
 
 [https://github.com/ms-jpq/vim.conf-2023](https://github.com/ms-jpq/vim.conf-2023)
 
