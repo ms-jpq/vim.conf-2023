@@ -4,7 +4,7 @@
 
 - Wang, Hao
 
-- Life status: NEET, traveling the ~~flat~~ Earth
+- Life status: NEET, traveling the flat planet sphere
 
 - If you are in Seattle area: Wink, Wink
 
@@ -16,7 +16,7 @@
 
 ![](./me.jpg)
 
-## Vim Related
+## `VIM` Related
 
 - [chadtree](https://github.com/ms-jpq/chadtree), NerdTree but chad
 
@@ -34,13 +34,13 @@
 
 ---
 
-# Cultural Learnings of VIM for Make Benefit Glorious Nation of UNIX
+# Cultural Learnings of `VIM` for Make Benefit Glorious Nation of `UNIX`
 
 - Translation: Understanding `UNIX` through the lens of `VIM`
 
-- `VIM` ⇆ `[Everything is a File, Files are Text, Processes communicate via Flies]` ⇆ `UNIX`
+- `VIM` ⇆ Files are **Text** ⇆ Everything is a **File** ⇆ **Processes** communicate via Flies ⇆ `UNIX`
 
-- `VIM` ⇆ **Recursion** ⇆ `UNIX`
+- `VIM` ⇆ **Recursion** ⇆ **Tree** of Processes ⇆ `UNIX`
 
 ---
 
@@ -56,7 +56,7 @@
 
 ---
 
-# [The Gainz](https://www.youtube.com/watch?v=qjlpBiQjzPg)
+# Servitor to the Machine God
 
 - Prepped chicken, steamed rice, raw eggs, frozen lettuce
 
@@ -72,9 +72,9 @@
 
 # Vim is more of a ~syntax~ editor
 
-## TreeSitter 🌳🪑
+Syntax ↔ **Semantics**
 
-- Syntax ↔ Semantics
+## TreeSitter 🌳🪑
 
 - Select part of syntax you want to alter → Change / Delete
 
@@ -100,7 +100,7 @@
 
 # What about "ad hoc" syntax
 
-## `ini` style: systemd, samba, mypy, php, git, warcraft3, fallout, literally everything
+## `ini` style: systemd, samba, mypy, php, git, warcraft3, fallout, literally every other program
 
 ```toml
 [Match]
@@ -155,7 +155,7 @@ Listen 80
 
 ---
 
-# Incantations for the machine spirits
+# Incantations for the machines
 
 ![](./tech_preist.gif)
 
@@ -221,6 +221,8 @@ printf -- '%s' "$SAYING"
 gay <<<"$SAYING" >&2
 ```
 
+---
+
 ## Other shell recursions
 
 - `chroot`: before / after file system isolation
@@ -235,13 +237,11 @@ bash -> ssh -> sshd -> bash
 
 ---
 
-# `NVIM` Tree ~~Sitter~~
+# `NVIM` Tree Sitter
 
-- Multi-Process
+- `NVIM` leaf
 
-```bash
-pstree
-```
+- Tree of Processes
 
 ```txt
 \-+= 08871 iiiiii nvim
@@ -261,7 +261,7 @@ pstree
     \--= 09152 iiiiii /Users/iiiiii/Library/Preferences/nvim/var/lib/ltex-ls/jdk-11.0.1
 ```
 
-- `--embed` ??
+- `nvim --embed` ??
 
 - Plugins
 
@@ -269,7 +269,71 @@ pstree
 
 ---
 
-# `VIM` Classic
+# UNIX Trees
+
+- PID 1
+
+## (open)launchd
+
+- MacOS
+
+- Some BSDs
+
+```txt
+-+= 00001 root /sbin/launchd
+ |--= 00490 root /usr/libexec/logd
+ |--= 00491 root /usr/libexec/smd
+ |--= 00492 root /usr/libexec/UserEventAgent (System)
+ |--= 00494 root /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninst
+ |--= 00495 root /System/Library/Frameworks/CoreServices.framework/Versions/A/Framework
+ |--= 00496 root /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediar
+ |-+= 00499 root /usr/sbin/systemstats --daemon
+ | \--- 00769 root /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+```
+
+## systemd
+
+- _Good_ Linux distributions
+
+```txt
+systemd,1
+  |-5/flow_checks,841 --daemon --http-prefix=/ntop --disable-login=1
+  |-agetty,971 -o -p -- \\u --noclear tty1 linux
+  |-chronyd,777
+  |-cron,944 -f -P
+  |-dbus-daemon,603 --system --address=systemd: --nofork --nopidfile --systemd-activati
+  |-dnsmasq,1137 --conf-file=/run/local/dnsmasq/wg0/dnsmasq.conf
+  |-dnsmasq,1468 --conf-file=/run/local/dnsmasq/enp1s0/dnsmasq.conf
+  |-haproxy,967 -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/opt/h
+  |   `-haproxy,974 -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/o
+  |-irqbalance,608 --foreground
+```
+
+---
+
+## OCI Containers
+
+- Tini, S6, supervisord, etc
+
+```txt
+podman-init,1 -- docker-entrypoint.sh postgres
+  `-postgres,2
+      |-postgres,59
+      |-postgres,60
+      |-postgres,62
+      |-postgres,63
+      |-postgres,64
+      |-postgres,65
+      `-postgres,69
+```
+
+---
+
+# ~~`COKE`~~ `VIM` Classic
+
+- `std{in,out,err}` are files too
+
+## Text IO
 
 - `'shell' 'sh'		string	(default $SHELL or "sh", Win32: "cmd.exe")`
 
@@ -286,6 +350,12 @@ pstree
 ## Installing `NVIM` on Windows comes with full `UNIX` suite via `msys2`
 
 ---
+
+# `UNIX` multi-tenancy
+
+- `HIER (Filesystem Hierarchy Standard)`
+
+- `XDG`
 
 ## `:help runtimepath`
 
@@ -312,42 +382,49 @@ $XDG_CONFIG_HOME/nvim/after"
 ## `man -- systemd.unit`
 
 ```txt
-/etc/systemd/system.control/*
-/run/systemd/system.control/*
-/run/systemd/transient/*
-/run/systemd/generator.early/*
-/etc/systemd/system/*
-/etc/systemd/system.attached/*
-/run/systemd/system/*
-/run/systemd/system.attached/*
-/run/systemd/generator/*
-…
-/usr/lib/systemd/system/*
-/run/systemd/generator.late/*
+/etc/systemd/system.control/*  ~/.config/systemd/user.control/*
+/run/systemd/system.control/*  $XDG_RUNTIME_DIR/systemd/user.control/*
+/run/systemd/transient/*       $XDG_RUNTIME_DIR/systemd/transient/*
+/run/systemd/generator.early/* $XDG_RUNTIME_DIR/systemd/generator.early/*
+/etc/systemd/system/*          ~/.config/systemd/user/*
+/etc/systemd/system.attached/* $XDG_CONFIG_DIRS/systemd/user/*
+/run/systemd/system/*          /etc/systemd/user/*
+/run/systemd/system.attached/* $XDG_RUNTIME_DIR/systemd/user/*
+/run/systemd/generator/*       /run/systemd/user/*
+.                              $XDG_RUNTIME_DIR/systemd/generator/*
+.                              $XDG_DATA_HOME/systemd/user/*
+.                              $XDG_DATA_DIRS/systemd/user/*
+…                              …
+/usr/lib/systemd/system/*      /usr/lib/systemd/user/*
+/run/systemd/generator.late/*  $XDG_RUNTIME_DIR/systemd/generator.late/*
 ```
 
-```txt
--+= 00001 root /sbin/launchd
- |--= 00490 root /usr/libexec/logd
- |--= 00491 root /usr/libexec/smd
- |--= 00492 root /usr/libexec/UserEventAgent (System)
- |--= 00494 root /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninst
- |--= 00495 root /System/Library/Frameworks/CoreServices.framework/Versions/A/Framework
- |--= 00496 root /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediar
- |-+= 00499 root /usr/sbin/systemstats --daemon
- | \--- 00769 root /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
-```
+---
 
-```txt
-systemd
-  ├─5/flow_checks --daemon --http-prefix=/ntop --disable-login=1
-  ├─agetty -o -p -- \\u --noclear tty1 linux
-  ├─chronyd
-  ├─cron -f -P
-  ├─dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation -
-  ├─dnsmasq --conf-file=/run/local/dnsmasq/wg0/dnsmasq.conf
-  ├─dnsmasq --conf-file=/run/local/dnsmasq/enp1s0/dnsmasq.conf
-  ├─haproxy -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/opt/hapro
-  │   └─haproxy -Ws -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -f /usr/local/opt/h
+# M ~~16~~ 4
 
-```
+- Most ~~American~~ UNIX problem solver
+
+- POSIX standard
+
+- Text templating **language**
+
+- Somehow **only data structure is list**
+
+- Gratuitous `system(const char *command)`
+
+- **No loops**, only recursion
+
+![](./gigachad.png)
+
+---
+
+# `@me`
+
+[https://github.com/ms-jpq/vim.conf-2023](https://github.com/ms-jpq/vim.conf-2023)
+
+- Planning on moving from Vancouver to Seattle
+
+- TN work VISA needed, since I'm Canadian
+
+---
