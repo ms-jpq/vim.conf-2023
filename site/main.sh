@@ -27,4 +27,4 @@ for MD in "${MDS[@]}"; do
 done
 
 rm -fr -- "$TMP"
-ln -sf -- ../1.html "$FIRST"
+ln -sf -- ./1.html "$FIRST"
